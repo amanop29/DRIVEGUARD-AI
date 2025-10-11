@@ -1,0 +1,75 @@
+{
+    "video_filename": "test001.mp4",
+    "video_metadata": {
+        "duration_seconds": 29.92,
+        "fps": 25.0,
+        "frame_count": 748,
+        "resolution": {
+            "width": 1280,
+            "height": 720
+        }
+    },
+    "average_speed_kmph": 0.09000000357627869,
+    "safety_violation": 1,
+    "traffic_signal_summary": {
+        "violations": [],
+        "traffic_violation_windows": [
+            {
+                "start_time": 75.4,
+                "end_time": 77.8
+            }
+        ],
+        "safety_violation": false,
+        "violation": true
+    },
+    "close_encounters": {
+        "close_encounters": [
+            {
+                "start_time": 9.48,
+                "peak_time": 10.8,
+                "peak_score": 0.577,
+                "where": "left",
+                "max_box_height_norm": 0.892,
+                "end_time": 16.2
+            },
+            {
+                "start_time": 23.16,
+                "peak_time": 23.16,
+                "peak_score": 0.218,
+                "where": "right",
+                "max_box_height_norm": 0.352,
+                "end_time": 23.52
+            }
+        ],
+        "event_count": 2
+    },
+    "turn_changes_orb": {
+        "turn_count": 4,
+        "left": 0,
+        "right": 4
+    },
+    "lane_change_count": {
+        "turn_count": 9,
+        "left": 4,
+        "right": 5
+    },
+    "illegal_way_bus_lane": {
+        "violation_detected": false,
+        "violation_ranges": []
+    },
+    "driving_scores": {
+        "overall_score": 79,
+        "safety_score": 84,
+        "compliance_score": 60,
+        "efficiency_score": 96,
+        "category": "Good",
+        "category_description": "Good performance with minor improvement opportunities",
+        "category_color": "amber",
+        "metrics_used": {
+            "close_encounters": 2,
+            "traffic_violations": 1,
+            "bus_lane_violations": 0,
+            "lane_changes": 9
+        }
+    }
+}

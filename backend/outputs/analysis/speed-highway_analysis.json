@@ -1,0 +1,64 @@
+{
+    "video_filename": "speed-highway.mp4",
+    "video_metadata": {
+        "duration_seconds": 29.52,
+        "fps": 25.0,
+        "frame_count": 738,
+        "resolution": {
+            "width": 1920,
+            "height": 1080
+        }
+    },
+    "average_speed_kmph": 69.31999969482422,
+    "safety_violation": 0,
+    "traffic_signal_summary": {
+        "violations": [],
+        "traffic_violation_windows": [],
+        "violation": false
+    },
+    "close_encounters": {
+        "close_encounters": [
+            {
+                "start_time": 11.44,
+                "end_time": 17.52,
+                "peak_time": 12.0,
+                "peak_score": 0.178,
+                "where": "right",
+                "max_box_height_norm": 0.647,
+                "min_distance_m": 4.12,
+                "ttc_sec": 3.42
+            }
+        ],
+        "event_count": 1,
+        "method": "enhanced_proximity_v2"
+    },
+    "turn_changes_orb": {
+        "turn_count": 0,
+        "left": 0,
+        "right": 0
+    },
+    "lane_change_count": {
+        "turn_count": 2,
+        "left": 1,
+        "right": 1
+    },
+    "illegal_way_bus_lane": {
+        "violation_detected": false,
+        "violation_ranges": []
+    },
+    "driving_scores": {
+        "overall_score": 96,
+        "safety_score": 92,
+        "compliance_score": 100,
+        "efficiency_score": 99,
+        "category": "Excellent",
+        "category_description": "Outstanding performance exceeding safety standards",
+        "category_color": "green",
+        "metrics_used": {
+            "close_encounters": 1,
+            "traffic_violations": 0,
+            "bus_lane_violations": 0,
+            "lane_changes": 2
+        }
+    }
+}

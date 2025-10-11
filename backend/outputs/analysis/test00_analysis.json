@@ -1,0 +1,159 @@
+{
+    "video_filename": "test00.mp4",
+    "video_metadata": {
+        "duration_seconds": 149.6,
+        "fps": 30.0,
+        "frame_count": 4488,
+        "resolution": {
+            "width": 1280,
+            "height": 720
+        }
+    },
+    "average_speed_kmph": 3.490000009536743,
+    "safety_violation": 5,
+    "traffic_signal_summary": {
+        "violations": [],
+        "traffic_violation_windows": [
+            {
+                "start_time": 75.4,
+                "end_time": 77.8
+            }
+        ],
+        "violation": true
+    },
+    "close_encounters": {
+        "close_encounters": [
+            {
+                "start_time": 4.0,
+                "peak_time": 7.6,
+                "peak_score": 0.956,
+                "where": "left",
+                "max_box_height_norm": 1.04,
+                "end_time": 7.73
+            },
+            {
+                "start_time": 10.93,
+                "peak_time": 11.07,
+                "peak_score": 0.533,
+                "where": "center",
+                "max_box_height_norm": 0.642,
+                "end_time": 11.33
+            },
+            {
+                "start_time": 25.07,
+                "peak_time": 27.33,
+                "peak_score": 0.779,
+                "where": "center",
+                "max_box_height_norm": 0.955,
+                "end_time": 27.6
+            },
+            {
+                "start_time": 31.2,
+                "peak_time": 31.47,
+                "peak_score": 0.825,
+                "where": "center",
+                "max_box_height_norm": 1.045,
+                "end_time": 31.73
+            },
+            {
+                "start_time": 43.47,
+                "peak_time": 43.6,
+                "peak_score": 0.799,
+                "where": "center",
+                "max_box_height_norm": 1.045,
+                "end_time": 43.87
+            },
+            {
+                "start_time": 61.87,
+                "peak_time": 63.6,
+                "peak_score": 1.087,
+                "where": "center",
+                "max_box_height_norm": 1.114,
+                "end_time": 63.73
+            },
+            {
+                "start_time": 68.27,
+                "peak_time": 68.4,
+                "peak_score": 0.563,
+                "where": "right",
+                "max_box_height_norm": 0.886,
+                "end_time": 68.93
+            },
+            {
+                "start_time": 79.47,
+                "peak_time": 82.27,
+                "peak_score": 0.855,
+                "where": "center",
+                "max_box_height_norm": 0.875,
+                "end_time": 82.27
+            },
+            {
+                "start_time": 96.27,
+                "peak_time": 98.53,
+                "peak_score": 1.153,
+                "where": "left",
+                "max_box_height_norm": 1.176,
+                "end_time": 98.53
+            },
+            {
+                "start_time": 111.33,
+                "peak_time": 116.53,
+                "peak_score": 0.534,
+                "where": "center",
+                "max_box_height_norm": 0.568,
+                "end_time": 116.53
+            },
+            {
+                "start_time": 139.73,
+                "peak_time": 144.13,
+                "peak_score": 1.042,
+                "where": "left",
+                "max_box_height_norm": 1.29,
+                "end_time": 146.13
+            },
+            {
+                "start_time": 148.67,
+                "peak_time": 148.67,
+                "peak_score": 0.529,
+                "where": "center",
+                "max_box_height_norm": 0.688,
+                "end_time": 148.93
+            }
+        ],
+        "event_count": 12
+    },
+    "turn_changes_orb": {
+        "turn_count": 2,
+        "left": 1,
+        "right": 1
+    },
+    "lane_change_count": {
+        "turn_count": 37,
+        "left": 13,
+        "right": 24
+    },
+    "illegal_way_bus_lane": {
+        "violation_detected": true,
+        "violation_ranges": [
+            {
+                "start_time": 0.9,
+                "end_time": 6.93
+            }
+        ]
+    },
+    "driving_scores": {
+        "overall_score": 27,
+        "safety_score": 4,
+        "compliance_score": 30,
+        "efficiency_score": 82,
+        "category": "Needs Improvement",
+        "category_description": "Performance requires attention and safety improvements",
+        "category_color": "red",
+        "metrics_used": {
+            "close_encounters": 12,
+            "traffic_violations": 1,
+            "bus_lane_violations": 1,
+            "lane_changes": 37
+        }
+    }
+}

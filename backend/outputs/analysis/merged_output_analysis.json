@@ -1,0 +1,1367 @@
+{
+    "analyses": [
+        {
+            "video_filename": "Dashcam001.mp4",
+            "video_metadata": {
+                "duration_seconds": 29.88,
+                "fps": 25,
+                "frame_count": 747,
+                "resolution": {
+                    "width": 1280,
+                    "height": 720
+                }
+            },
+            "average_speed_kmph": 19.700000762939453,
+            "safety_violation": 0,
+            "traffic_signal_summary": {
+                "violations": [],
+                "traffic_violation_windows": [],
+                "violation": false
+            },
+            "close_encounters": {
+                "close_encounters": [],
+                "event_count": 0,
+                "method": "enhanced_proximity_v2"
+            },
+            "turn_changes_orb": {
+                "turn_count": 0,
+                "left": 0,
+                "right": 0
+            },
+            "lane_change_count": {
+                "turn_count": 4,
+                "left": 2,
+                "right": 2
+            },
+            "illegal_way_bus_lane": {
+                "violation_detected": false,
+                "violation_ranges": []
+            },
+            "driving_scores": {
+                "overall_score": 100,
+                "safety_score": 100,
+                "compliance_score": 100,
+                "efficiency_score": 98,
+                "category": "Excellent",
+                "category_description": "Outstanding performance exceeding safety standards",
+                "category_color": "green",
+                "metrics_used": {
+                    "close_encounters": 0,
+                    "traffic_violations": 0,
+                    "bus_lane_violations": 0,
+                    "lane_changes": 4
+                }
+            }
+        },
+        {
+            "video_filename": "Dashcam002.mp4",
+            "video_metadata": {
+                "duration_seconds": 29.92,
+                "fps": 25,
+                "frame_count": 748,
+                "resolution": {
+                    "width": 1280,
+                    "height": 720
+                }
+            },
+            "average_speed_kmph": 11.390000343322754,
+            "safety_violation": 1,
+            "traffic_signal_summary": {
+                "violations": [],
+                "traffic_violation_windows": [
+                    {
+                        "start_time": 75.4,
+                        "end_time": 77.8
+                    }
+                ],
+                "safety_violation": false,
+                "violation": true
+            },
+            "close_encounters": {
+                "close_encounters": [
+                    {
+                        "start_time": 9.48,
+                        "peak_time": 10.8,
+                        "peak_score": 0.577,
+                        "where": "left",
+                        "max_box_height_norm": 0.892,
+                        "end_time": 16.2
+                    },
+                    {
+                        "start_time": 23.16,
+                        "peak_time": 23.16,
+                        "peak_score": 0.218,
+                        "where": "right",
+                        "max_box_height_norm": 0.352,
+                        "end_time": 23.52
+                    }
+                ],
+                "event_count": 2
+            },
+            "turn_changes_orb": {
+                "turn_count": 4,
+                "left": 0,
+                "right": 4
+            },
+            "lane_change_count": {
+                "turn_count": 9,
+                "left": 4,
+                "right": 5
+            },
+            "illegal_way_bus_lane": {
+                "violation_detected": false,
+                "violation_ranges": []
+            },
+            "driving_scores": {
+                "overall_score": 79,
+                "safety_score": 84,
+                "compliance_score": 60,
+                "efficiency_score": 96,
+                "category": "Good",
+                "category_description": "Good performance with minor improvement opportunities",
+                "category_color": "amber",
+                "metrics_used": {
+                    "close_encounters": 2,
+                    "traffic_violations": 1,
+                    "bus_lane_violations": 0,
+                    "lane_changes": 9
+                }
+            }
+        },
+        {
+            "video_filename": "Dashcam003.mp4",
+            "video_metadata": {
+                "duration_seconds": 149.6,
+                "fps": 30,
+                "frame_count": 4488,
+                "resolution": {
+                    "width": 1280,
+                    "height": 720
+                }
+            },
+            "average_speed_kmph": 44.4900016784668,
+            "safety_violation": 1,
+            "traffic_signal_summary": {
+                "violations": [],
+                "traffic_violation_windows": [],
+                "violation": false
+            },
+            "close_encounters": {
+                "close_encounters": [
+                    {
+                        "start_time": 3.53,
+                        "end_time": 5.2,
+                        "peak_time": 4,
+                        "peak_score": 0.426,
+                        "where": "left",
+                        "max_box_height_norm": 0.475,
+                        "min_distance_m": 2.81,
+                        "ttc_sec": 1.13
+                    },
+                    {
+                        "start_time": 6.2,
+                        "end_time": 9.67,
+                        "peak_time": 6.87,
+                        "peak_score": 0.355,
+                        "where": "left",
+                        "max_box_height_norm": 0.569,
+                        "min_distance_m": 2.34,
+                        "ttc_sec": 1.67
+                    },
+                    {
+                        "start_time": 26.53,
+                        "end_time": 28.4,
+                        "peak_time": 26.8,
+                        "peak_score": 0.286,
+                        "where": "right",
+                        "max_box_height_norm": 0.59,
+                        "min_distance_m": 4.52,
+                        "ttc_sec": 1.54
+                    },
+                    {
+                        "start_time": 30.73,
+                        "end_time": 32.2,
+                        "peak_time": 31.2,
+                        "peak_score": 0.423,
+                        "where": "right",
+                        "max_box_height_norm": 0.529,
+                        "min_distance_m": 2.52,
+                        "ttc_sec": 1.16
+                    },
+                    {
+                        "start_time": 42.93,
+                        "end_time": 44.27,
+                        "peak_time": 43.33,
+                        "peak_score": 0.606,
+                        "where": "right",
+                        "max_box_height_norm": 0.656,
+                        "min_distance_m": 4.07,
+                        "ttc_sec": 0.61
+                    },
+                    {
+                        "start_time": 44.73,
+                        "end_time": 63.8,
+                        "peak_time": 45.8,
+                        "peak_score": 0.48,
+                        "where": "center",
+                        "max_box_height_norm": 0.36,
+                        "min_distance_m": 3.71,
+                        "ttc_sec": 0.98
+                    },
+                    {
+                        "start_time": 59.4,
+                        "end_time": 69.47,
+                        "peak_time": 62.47,
+                        "peak_score": 0.679,
+                        "where": "center",
+                        "max_box_height_norm": 0.494,
+                        "min_distance_m": 9.44,
+                        "ttc_sec": 0.43
+                    },
+                    {
+                        "start_time": 61,
+                        "end_time": 67.33,
+                        "peak_time": 61.4,
+                        "peak_score": 0.304,
+                        "where": "right",
+                        "max_box_height_norm": 0.454,
+                        "min_distance_m": 2.94,
+                        "ttc_sec": 1.86
+                    },
+                    {
+                        "start_time": 79.47,
+                        "end_time": 84.13,
+                        "peak_time": 83.67,
+                        "peak_score": 0.33,
+                        "where": "center",
+                        "max_box_height_norm": 0.318,
+                        "min_distance_m": 4.19,
+                        "ttc_sec": 0
+                    },
+                    {
+                        "start_time": 84.8,
+                        "end_time": 89.8,
+                        "peak_time": 88.87,
+                        "peak_score": 0.355,
+                        "where": "center",
+                        "max_box_height_norm": 0.364,
+                        "min_distance_m": 3.66,
+                        "ttc_sec": 2.06
+                    },
+                    {
+                        "start_time": 95.87,
+                        "end_time": 108.13,
+                        "peak_time": 99.8,
+                        "peak_score": 0.392,
+                        "where": "center",
+                        "max_box_height_norm": 0.429,
+                        "min_distance_m": 3.11,
+                        "ttc_sec": 0
+                    },
+                    {
+                        "start_time": 116.67,
+                        "end_time": 118.47,
+                        "peak_time": 117.27,
+                        "peak_score": 0.201,
+                        "where": "left",
+                        "max_box_height_norm": 0.367,
+                        "min_distance_m": 8.48,
+                        "ttc_sec": 2.6
+                    },
+                    {
+                        "start_time": 143,
+                        "end_time": 145.27,
+                        "peak_time": 143.27,
+                        "peak_score": 0.392,
+                        "where": "left",
+                        "max_box_height_norm": 0.801,
+                        "min_distance_m": 4.12,
+                        "ttc_sec": 1.03
+                    }
+                ],
+                "event_count": 13,
+                "method": "enhanced_proximity_v2"
+            },
+            "turn_changes_orb": {
+                "turn_count": 2,
+                "left": 1,
+                "right": 1
+            },
+            "lane_change_count": {
+                "turn_count": 28,
+                "left": 10,
+                "right": 18
+            },
+            "illegal_way_bus_lane": {
+                "violation_detected": true,
+                "violation_ranges": [
+                    {
+                        "start_time": 0.9,
+                        "end_time": 6.93
+                    }
+                ]
+            },
+            "driving_scores": {
+                "overall_score": 38,
+                "safety_score": 0,
+                "compliance_score": 70,
+                "efficiency_score": 86,
+                "category": "Needs Improvement",
+                "category_description": "Performance requires attention and safety improvements",
+                "category_color": "red",
+                "metrics_used": {
+                    "close_encounters": 13,
+                    "traffic_violations": 0,
+                    "bus_lane_violations": 1,
+                    "lane_changes": 28
+                }
+            }
+        },
+        {
+            "video_filename": "Dashcam004.mp4",
+            "video_metadata": {
+                "duration_seconds": 29.24,
+                "fps": 25,
+                "frame_count": 731,
+                "resolution": {
+                    "width": 1920,
+                    "height": 1080
+                }
+            },
+            "average_speed_kmph": 23.219999313354492,
+            "safety_violation": 1,
+            "traffic_signal_summary": {
+                "violations": [],
+                "traffic_violation_windows": [],
+                "safety_violation": false,
+                "violation": false
+            },
+            "close_encounters": {
+                "close_encounters": [],
+                "event_count": 0
+            },
+            "turn_changes_orb": {
+                "turn_count": 0,
+                "left": 0,
+                "right": 0
+            },
+            "lane_change_count": {
+                "turn_count": 4,
+                "left": 1,
+                "right": 3
+            },
+            "illegal_way_bus_lane": {
+                "violation_detected": false,
+                "violation_ranges": []
+            },
+            "driving_scores": {
+                "overall_score": 88,
+                "safety_score": 100,
+                "compliance_score": 60,
+                "efficiency_score": 98,
+                "category": "Good",
+                "category_description": "Good performance with minor improvement opportunities",
+                "category_color": "amber",
+                "metrics_used": {
+                    "close_encounters": 0,
+                    "traffic_violations": 1,
+                    "bus_lane_violations": 0,
+                    "lane_changes": 4
+                }
+            }
+        },
+        {
+            "video_filename": "new01.mp4",
+            "video_metadata": {
+                "duration_seconds": 29.76,
+                "fps": 25,
+                "frame_count": 744,
+                "resolution": {
+                    "width": 1280,
+                    "height": 720
+                }
+            },
+            "average_speed_kmph": 1.5399999618530273,
+            "safety_violation": 1,
+            "traffic_signal_summary": {
+                "violations": [],
+                "traffic_violation_windows": [
+                    {
+                        "start_time": 75.4,
+                        "end_time": 77.8
+                    }
+                ],
+                "safety_violation": false,
+                "violation": true
+            },
+            "close_encounters": {
+                "close_encounters": [
+                    {
+                        "start_time": 0.6,
+                        "peak_time": 0.6,
+                        "peak_score": 0.429,
+                        "where": "left",
+                        "max_box_height_norm": 0.591,
+                        "end_time": 0.84
+                    },
+                    {
+                        "start_time": 15.12,
+                        "peak_time": 16.32,
+                        "peak_score": 0.5,
+                        "where": "center",
+                        "max_box_height_norm": 0.528,
+                        "end_time": 16.32
+                    }
+                ],
+                "event_count": 2
+            },
+            "turn_changes_orb": {
+                "turn_count": 0,
+                "left": 0,
+                "right": 0
+            },
+            "lane_change_count": {
+                "turn_count": 5,
+                "left": 2,
+                "right": 3
+            },
+            "illegal_way_bus_lane": {
+                "violation_detected": false,
+                "violation_ranges": []
+            },
+            "driving_scores": {
+                "overall_score": 80,
+                "safety_score": 84,
+                "compliance_score": 60,
+                "efficiency_score": 98,
+                "category": "Good",
+                "category_description": "Good performance with minor improvement opportunities",
+                "category_color": "amber",
+                "metrics_used": {
+                    "close_encounters": 2,
+                    "traffic_violations": 1,
+                    "bus_lane_violations": 0,
+                    "lane_changes": 5
+                }
+            }
+        },
+        {
+            "video_filename": "new02.mp4",
+            "video_metadata": {
+                "duration_seconds": 29.88,
+                "fps": 25,
+                "frame_count": 747,
+                "resolution": {
+                    "width": 1280,
+                    "height": 720
+                }
+            },
+            "average_speed_kmph": 0.550000011920929,
+            "safety_violation": 0,
+            "traffic_signal_summary": {
+                "violations": [],
+                "traffic_violation_windows": [],
+                "violation": false
+            },
+            "close_encounters": {
+                "close_encounters": [
+                    {
+                        "start_time": 2.16,
+                        "peak_time": 6.6,
+                        "peak_score": 0.996,
+                        "where": "center",
+                        "max_box_height_norm": 1.028,
+                        "end_time": 6.6
+                    },
+                    {
+                        "start_time": 25.56,
+                        "peak_time": 25.56,
+                        "peak_score": 0.188,
+                        "where": "left",
+                        "max_box_height_norm": 0.426,
+                        "end_time": 25.92
+                    }
+                ],
+                "event_count": 2
+            },
+            "turn_changes_orb": {
+                "turn_count": 1,
+                "left": 1,
+                "right": 0
+            },
+            "lane_change_count": {
+                "turn_count": 5,
+                "left": 3,
+                "right": 2
+            },
+            "illegal_way_bus_lane": {
+                "violation_detected": false,
+                "violation_ranges": []
+            },
+            "driving_scores": {
+                "overall_score": 92,
+                "safety_score": 84,
+                "compliance_score": 100,
+                "efficiency_score": 98,
+                "category": "Excellent",
+                "category_description": "Outstanding performance exceeding safety standards",
+                "category_color": "green",
+                "metrics_used": {
+                    "close_encounters": 2,
+                    "traffic_violations": 0,
+                    "bus_lane_violations": 0,
+                    "lane_changes": 5
+                }
+            }
+        },
+        {
+            "video_filename": "speed-highway.mp4",
+            "video_metadata": {
+                "duration_seconds": 29.52,
+                "fps": 25,
+                "frame_count": 738,
+                "resolution": {
+                    "width": 1920,
+                    "height": 1080
+                }
+            },
+            "average_speed_kmph": 29.329999923706055,
+            "safety_violation": 0,
+            "traffic_signal_summary": {
+                "violations": [],
+                "traffic_violation_windows": [],
+                "violation": false
+            },
+            "close_encounters": {
+                "close_encounters": [
+                    {
+                        "start_time": 11.44,
+                        "end_time": 17.52,
+                        "peak_time": 12,
+                        "peak_score": 0.178,
+                        "where": "right",
+                        "max_box_height_norm": 0.647,
+                        "min_distance_m": 4.12,
+                        "ttc_sec": 3.42
+                    }
+                ],
+                "event_count": 1,
+                "method": "enhanced_proximity_v2"
+            },
+            "turn_changes_orb": {
+                "turn_count": 0,
+                "left": 0,
+                "right": 0
+            },
+            "lane_change_count": {
+                "turn_count": 0,
+                "left": 0,
+                "right": 0
+            },
+            "illegal_way_bus_lane": {
+                "violation_detected": false,
+                "violation_ranges": []
+            },
+            "driving_scores": {
+                "overall_score": 96,
+                "safety_score": 92,
+                "compliance_score": 100,
+                "efficiency_score": 100,
+                "category": "Excellent",
+                "category_description": "Outstanding performance exceeding safety standards",
+                "category_color": "green",
+                "metrics_used": {
+                    "close_encounters": 1,
+                    "traffic_violations": 0,
+                    "bus_lane_violations": 0,
+                    "lane_changes": 0
+                }
+            }
+        },
+        {
+            "video_filename": "test001.mp4",
+            "video_metadata": {
+                "duration_seconds": 29.92,
+                "fps": 25,
+                "frame_count": 748,
+                "resolution": {
+                    "width": 1280,
+                    "height": 720
+                }
+            },
+            "average_speed_kmph": 0.09000000357627869,
+            "safety_violation": 1,
+            "traffic_signal_summary": {
+                "violations": [],
+                "traffic_violation_windows": [
+                    {
+                        "start_time": 75.4,
+                        "end_time": 77.8
+                    }
+                ],
+                "safety_violation": false,
+                "violation": true
+            },
+            "close_encounters": {
+                "close_encounters": [
+                    {
+                        "start_time": 9.48,
+                        "peak_time": 10.8,
+                        "peak_score": 0.577,
+                        "where": "left",
+                        "max_box_height_norm": 0.892,
+                        "end_time": 16.2
+                    },
+                    {
+                        "start_time": 23.16,
+                        "peak_time": 23.16,
+                        "peak_score": 0.218,
+                        "where": "right",
+                        "max_box_height_norm": 0.352,
+                        "end_time": 23.52
+                    }
+                ],
+                "event_count": 2
+            },
+            "turn_changes_orb": {
+                "turn_count": 4,
+                "left": 0,
+                "right": 4
+            },
+            "lane_change_count": {
+                "turn_count": 9,
+                "left": 4,
+                "right": 5
+            },
+            "illegal_way_bus_lane": {
+                "violation_detected": false,
+                "violation_ranges": []
+            },
+            "driving_scores": {
+                "overall_score": 79,
+                "safety_score": 84,
+                "compliance_score": 60,
+                "efficiency_score": 96,
+                "category": "Good",
+                "category_description": "Good performance with minor improvement opportunities",
+                "category_color": "amber",
+                "metrics_used": {
+                    "close_encounters": 2,
+                    "traffic_violations": 1,
+                    "bus_lane_violations": 0,
+                    "lane_changes": 9
+                }
+            }
+        },
+        {
+            "video_filename": "test00.mp4",
+            "video_metadata": {
+                "duration_seconds": 149.6,
+                "fps": 30,
+                "frame_count": 4488,
+                "resolution": {
+                    "width": 1280,
+                    "height": 720
+                }
+            },
+            "average_speed_kmph": 3.490000009536743,
+            "safety_violation": 5,
+            "traffic_signal_summary": {
+                "violations": [],
+                "traffic_violation_windows": [
+                    {
+                        "start_time": 75.4,
+                        "end_time": 77.8
+                    }
+                ],
+                "violation": true
+            },
+            "close_encounters": {
+                "close_encounters": [
+                    {
+                        "start_time": 4,
+                        "peak_time": 7.6,
+                        "peak_score": 0.956,
+                        "where": "left",
+                        "max_box_height_norm": 1.04,
+                        "end_time": 7.73
+                    },
+                    {
+                        "start_time": 10.93,
+                        "peak_time": 11.07,
+                        "peak_score": 0.533,
+                        "where": "center",
+                        "max_box_height_norm": 0.642,
+                        "end_time": 11.33
+                    },
+                    {
+                        "start_time": 25.07,
+                        "peak_time": 27.33,
+                        "peak_score": 0.779,
+                        "where": "center",
+                        "max_box_height_norm": 0.955,
+                        "end_time": 27.6
+                    },
+                    {
+                        "start_time": 31.2,
+                        "peak_time": 31.47,
+                        "peak_score": 0.825,
+                        "where": "center",
+                        "max_box_height_norm": 1.045,
+                        "end_time": 31.73
+                    },
+                    {
+                        "start_time": 43.47,
+                        "peak_time": 43.6,
+                        "peak_score": 0.799,
+                        "where": "center",
+                        "max_box_height_norm": 1.045,
+                        "end_time": 43.87
+                    },
+                    {
+                        "start_time": 61.87,
+                        "peak_time": 63.6,
+                        "peak_score": 1.087,
+                        "where": "center",
+                        "max_box_height_norm": 1.114,
+                        "end_time": 63.73
+                    },
+                    {
+                        "start_time": 68.27,
+                        "peak_time": 68.4,
+                        "peak_score": 0.563,
+                        "where": "right",
+                        "max_box_height_norm": 0.886,
+                        "end_time": 68.93
+                    },
+                    {
+                        "start_time": 79.47,
+                        "peak_time": 82.27,
+                        "peak_score": 0.855,
+                        "where": "center",
+                        "max_box_height_norm": 0.875,
+                        "end_time": 82.27
+                    },
+                    {
+                        "start_time": 96.27,
+                        "peak_time": 98.53,
+                        "peak_score": 1.153,
+                        "where": "left",
+                        "max_box_height_norm": 1.176,
+                        "end_time": 98.53
+                    },
+                    {
+                        "start_time": 111.33,
+                        "peak_time": 116.53,
+                        "peak_score": 0.534,
+                        "where": "center",
+                        "max_box_height_norm": 0.568,
+                        "end_time": 116.53
+                    },
+                    {
+                        "start_time": 139.73,
+                        "peak_time": 144.13,
+                        "peak_score": 1.042,
+                        "where": "left",
+                        "max_box_height_norm": 1.29,
+                        "end_time": 146.13
+                    },
+                    {
+                        "start_time": 148.67,
+                        "peak_time": 148.67,
+                        "peak_score": 0.529,
+                        "where": "center",
+                        "max_box_height_norm": 0.688,
+                        "end_time": 148.93
+                    }
+                ],
+                "event_count": 12
+            },
+            "turn_changes_orb": {
+                "turn_count": 2,
+                "left": 1,
+                "right": 1
+            },
+            "lane_change_count": {
+                "turn_count": 37,
+                "left": 13,
+                "right": 24
+            },
+            "illegal_way_bus_lane": {
+                "violation_detected": true,
+                "violation_ranges": [
+                    {
+                        "start_time": 0.9,
+                        "end_time": 6.93
+                    }
+                ]
+            },
+            "driving_scores": {
+                "overall_score": 27,
+                "safety_score": 4,
+                "compliance_score": 30,
+                "efficiency_score": 82,
+                "category": "Needs Improvement",
+                "category_description": "Performance requires attention and safety improvements",
+                "category_color": "red",
+                "metrics_used": {
+                    "close_encounters": 12,
+                    "traffic_violations": 1,
+                    "bus_lane_violations": 1,
+                    "lane_changes": 37
+                }
+            }
+        }
+    ],
+    "new02.mp4": {
+        "video_filename": "new02.mp4",
+        "video_metadata": {
+            "duration_seconds": 29.88,
+            "fps": 25,
+            "frame_count": 747,
+            "resolution": {
+                "width": 1280,
+                "height": 720
+            }
+        },
+        "average_speed_kmph": 16.43000030517578,
+        "safety_violation": 0,
+        "traffic_signal_summary": {
+            "violations": [],
+            "traffic_violation_windows": [],
+            "violation": false
+        },
+        "close_encounters": {
+            "close_encounters": [
+                {
+                    "start_time": 3.44,
+                    "end_time": 24.16,
+                    "peak_time": 9.6,
+                    "peak_score": 0.368,
+                    "where": "center",
+                    "max_box_height_norm": 0.379,
+                    "min_distance_m": 3.52,
+                    "ttc_sec": 0
+                }
+            ],
+            "event_count": 1,
+            "method": "enhanced_proximity_v2"
+        },
+        "turn_changes_orb": {
+            "turn_count": 1,
+            "left": 1,
+            "right": 0
+        },
+        "lane_change_count": {
+            "turn_count": 0,
+            "left": 0,
+            "right": 0
+        },
+        "illegal_way_bus_lane": {
+            "violation_detected": false,
+            "violation_ranges": []
+        },
+        "driving_scores": {
+            "overall_score": 94,
+            "safety_score": 88,
+            "compliance_score": 100,
+            "efficiency_score": 100,
+            "category": "Excellent",
+            "category_description": "Outstanding performance exceeding safety standards",
+            "category_color": "green",
+            "metrics_used": {
+                "close_encounters": 1,
+                "traffic_violations": 0,
+                "bus_lane_violations": 0,
+                "lane_changes": 0
+            }
+        }
+    },
+    "Dashcam002.mp4": {
+        "video_filename": "Dashcam002.mp4",
+        "video_metadata": {
+            "duration_seconds": 29.92,
+            "fps": 25,
+            "frame_count": 748,
+            "resolution": {
+                "width": 1280,
+                "height": 720
+            }
+        },
+        "average_speed_kmph": 18.799999237060547,
+        "safety_violation": 0,
+        "traffic_signal_summary": {
+            "violations": [],
+            "traffic_violation_windows": [],
+            "violation": false
+        },
+        "close_encounters": {
+            "close_encounters": [
+                {
+                    "start_time": 0.08,
+                    "end_time": 3.44,
+                    "peak_time": 1.52,
+                    "peak_score": 0.327,
+                    "where": "center",
+                    "max_box_height_norm": 0.31,
+                    "min_distance_m": 4.3,
+                    "ttc_sec": 0
+                }
+            ],
+            "event_count": 1,
+            "method": "enhanced_proximity_v2"
+        },
+        "turn_changes_orb": {
+            "turn_count": 4,
+            "left": 0,
+            "right": 4
+        },
+        "lane_change_count": {
+            "turn_count": 1,
+            "left": 1,
+            "right": 0
+        },
+        "illegal_way_bus_lane": {
+            "violation_detected": false,
+            "violation_ranges": []
+        },
+        "driving_scores": {
+            "overall_score": 94,
+            "safety_score": 88,
+            "compliance_score": 100,
+            "efficiency_score": 98,
+            "category": "Excellent",
+            "category_description": "Outstanding performance exceeding safety standards",
+            "category_color": "green",
+            "metrics_used": {
+                "close_encounters": 1,
+                "traffic_violations": 0,
+                "bus_lane_violations": 0,
+                "lane_changes": 1
+            }
+        }
+    },
+    "speed-highway.mp4": {
+        "video_filename": "speed-highway.mp4",
+        "video_metadata": {
+            "duration_seconds": 29.52,
+            "fps": 25,
+            "frame_count": 738,
+            "resolution": {
+                "width": 1920,
+                "height": 1080
+            }
+        },
+        "average_speed_kmph": 69.31999969482422,
+        "safety_violation": 0,
+        "traffic_signal_summary": {
+            "violations": [],
+            "traffic_violation_windows": [],
+            "violation": false
+        },
+        "close_encounters": {
+            "close_encounters": [
+                {
+                    "start_time": 11.44,
+                    "end_time": 17.52,
+                    "peak_time": 12,
+                    "peak_score": 0.178,
+                    "where": "right",
+                    "max_box_height_norm": 0.647,
+                    "min_distance_m": 4.12,
+                    "ttc_sec": 3.42
+                }
+            ],
+            "event_count": 1,
+            "method": "enhanced_proximity_v2"
+        },
+        "turn_changes_orb": {
+            "turn_count": 0,
+            "left": 0,
+            "right": 0
+        },
+        "lane_change_count": {
+            "turn_count": 2,
+            "left": 1,
+            "right": 1
+        },
+        "illegal_way_bus_lane": {
+            "violation_detected": false,
+            "violation_ranges": []
+        },
+        "driving_scores": {
+            "overall_score": 96,
+            "safety_score": 92,
+            "compliance_score": 100,
+            "efficiency_score": 99,
+            "category": "Excellent",
+            "category_description": "Outstanding performance exceeding safety standards",
+            "category_color": "green",
+            "metrics_used": {
+                "close_encounters": 1,
+                "traffic_violations": 0,
+                "bus_lane_violations": 0,
+                "lane_changes": 2
+            }
+        }
+    },
+    "Dashcam003.mp4": {
+        "video_filename": "Dashcam003.mp4",
+        "video_metadata": {
+            "duration_seconds": 149.6,
+            "fps": 30,
+            "frame_count": 4488,
+            "resolution": {
+                "width": 1280,
+                "height": 720
+            }
+        },
+        "average_speed_kmph": 44.4900016784668,
+        "safety_violation": 1,
+        "traffic_signal_summary": {
+            "violations": [],
+            "traffic_violation_windows": [],
+            "violation": false
+        },
+        "close_encounters": {
+            "close_encounters": [
+                {
+                    "start_time": 3.53,
+                    "end_time": 5.2,
+                    "peak_time": 4,
+                    "peak_score": 0.426,
+                    "where": "left",
+                    "max_box_height_norm": 0.475,
+                    "min_distance_m": 2.81,
+                    "ttc_sec": 1.13
+                },
+                {
+                    "start_time": 6.2,
+                    "end_time": 9.67,
+                    "peak_time": 6.87,
+                    "peak_score": 0.355,
+                    "where": "left",
+                    "max_box_height_norm": 0.569,
+                    "min_distance_m": 2.34,
+                    "ttc_sec": 1.67
+                },
+                {
+                    "start_time": 26.53,
+                    "end_time": 28.4,
+                    "peak_time": 26.8,
+                    "peak_score": 0.286,
+                    "where": "right",
+                    "max_box_height_norm": 0.59,
+                    "min_distance_m": 4.52,
+                    "ttc_sec": 1.54
+                },
+                {
+                    "start_time": 30.73,
+                    "end_time": 32.2,
+                    "peak_time": 31.2,
+                    "peak_score": 0.423,
+                    "where": "right",
+                    "max_box_height_norm": 0.529,
+                    "min_distance_m": 2.52,
+                    "ttc_sec": 1.16
+                },
+                {
+                    "start_time": 42.93,
+                    "end_time": 44.27,
+                    "peak_time": 43.33,
+                    "peak_score": 0.606,
+                    "where": "right",
+                    "max_box_height_norm": 0.656,
+                    "min_distance_m": 4.07,
+                    "ttc_sec": 0.61
+                },
+                {
+                    "start_time": 44.73,
+                    "end_time": 63.8,
+                    "peak_time": 45.8,
+                    "peak_score": 0.48,
+                    "where": "center",
+                    "max_box_height_norm": 0.36,
+                    "min_distance_m": 3.71,
+                    "ttc_sec": 0.98
+                },
+                {
+                    "start_time": 59.4,
+                    "end_time": 69.47,
+                    "peak_time": 62.47,
+                    "peak_score": 0.679,
+                    "where": "center",
+                    "max_box_height_norm": 0.494,
+                    "min_distance_m": 9.44,
+                    "ttc_sec": 0.43
+                },
+                {
+                    "start_time": 61,
+                    "end_time": 67.33,
+                    "peak_time": 61.4,
+                    "peak_score": 0.304,
+                    "where": "right",
+                    "max_box_height_norm": 0.454,
+                    "min_distance_m": 2.94,
+                    "ttc_sec": 1.86
+                },
+                {
+                    "start_time": 79.47,
+                    "end_time": 84.13,
+                    "peak_time": 83.67,
+                    "peak_score": 0.33,
+                    "where": "center",
+                    "max_box_height_norm": 0.318,
+                    "min_distance_m": 4.19,
+                    "ttc_sec": 0
+                },
+                {
+                    "start_time": 84.8,
+                    "end_time": 89.8,
+                    "peak_time": 88.87,
+                    "peak_score": 0.355,
+                    "where": "center",
+                    "max_box_height_norm": 0.364,
+                    "min_distance_m": 3.66,
+                    "ttc_sec": 2.06
+                },
+                {
+                    "start_time": 95.87,
+                    "end_time": 108.13,
+                    "peak_time": 99.8,
+                    "peak_score": 0.392,
+                    "where": "center",
+                    "max_box_height_norm": 0.429,
+                    "min_distance_m": 3.11,
+                    "ttc_sec": 0
+                },
+                {
+                    "start_time": 116.67,
+                    "end_time": 118.47,
+                    "peak_time": 117.27,
+                    "peak_score": 0.201,
+                    "where": "left",
+                    "max_box_height_norm": 0.367,
+                    "min_distance_m": 8.48,
+                    "ttc_sec": 2.6
+                },
+                {
+                    "start_time": 143,
+                    "end_time": 145.27,
+                    "peak_time": 143.27,
+                    "peak_score": 0.392,
+                    "where": "left",
+                    "max_box_height_norm": 0.801,
+                    "min_distance_m": 4.12,
+                    "ttc_sec": 1.03
+                }
+            ],
+            "event_count": 13,
+            "method": "enhanced_proximity_v2"
+        },
+        "turn_changes_orb": {
+            "turn_count": 2,
+            "left": 1,
+            "right": 1
+        },
+        "lane_change_count": {
+            "turn_count": 21,
+            "left": 13,
+            "right": 8
+        },
+        "illegal_way_bus_lane": {
+            "violation_detected": true,
+            "violation_ranges": [
+                {
+                    "start_time": 0.9,
+                    "end_time": 6.93
+                }
+            ]
+        },
+        "driving_scores": {
+            "overall_score": 39,
+            "safety_score": 0,
+            "compliance_score": 70,
+            "efficiency_score": 90,
+            "category": "Needs Improvement",
+            "category_description": "Performance requires attention and safety improvements",
+            "category_color": "red",
+            "metrics_used": {
+                "close_encounters": 13,
+                "traffic_violations": 0,
+                "bus_lane_violations": 1,
+                "lane_changes": 21
+            }
+        }
+    },
+    "Dashcam001.mp4": {
+        "video_filename": "Dashcam001.mp4",
+        "video_metadata": {
+            "duration_seconds": 29.88,
+            "fps": 25,
+            "frame_count": 747,
+            "resolution": {
+                "width": 1280,
+                "height": 720
+            }
+        },
+        "average_speed_kmph": 19.700000762939453,
+        "safety_violation": 0,
+        "traffic_signal_summary": {
+            "violations": [],
+            "traffic_violation_windows": [],
+            "violation": false
+        },
+        "close_encounters": {
+            "close_encounters": [],
+            "event_count": 0,
+            "method": "enhanced_proximity_v2"
+        },
+        "turn_changes_orb": {
+            "turn_count": 0,
+            "left": 0,
+            "right": 0
+        },
+        "lane_change_count": {
+            "turn_count": 4,
+            "left": 2,
+            "right": 2
+        },
+        "illegal_way_bus_lane": {
+            "violation_detected": false,
+            "violation_ranges": []
+        },
+        "driving_scores": {
+            "overall_score": 100,
+            "safety_score": 100,
+            "compliance_score": 100,
+            "efficiency_score": 98,
+            "category": "Excellent",
+            "category_description": "Outstanding performance exceeding safety standards",
+            "category_color": "green",
+            "metrics_used": {
+                "close_encounters": 0,
+                "traffic_violations": 0,
+                "bus_lane_violations": 0,
+                "lane_changes": 4
+            }
+        }
+    },
+    "Dashcam004.mp4": {
+        "video_filename": "Dashcam004.mp4",
+        "video_metadata": {
+            "duration_seconds": 29.24,
+            "fps": 25,
+            "frame_count": 731,
+            "resolution": {
+                "width": 1920,
+                "height": 1080
+            }
+        },
+        "average_speed_kmph": 17.420000076293945,
+        "safety_violation": 0,
+        "traffic_signal_summary": {
+            "violations": [],
+            "traffic_violation_windows": [],
+            "violation": false
+        },
+        "close_encounters": {
+            "close_encounters": [
+                {
+                    "start_time": 22.16,
+                    "end_time": 29.2,
+                    "peak_time": 24.96,
+                    "peak_score": 0.373,
+                    "where": "center",
+                    "max_box_height_norm": 0.389,
+                    "min_distance_m": 3.43,
+                    "ttc_sec": 0
+                }
+            ],
+            "event_count": 1,
+            "method": "enhanced_proximity_v2"
+        },
+        "turn_changes_orb": {
+            "turn_count": 0,
+            "left": 0,
+            "right": 0
+        },
+        "lane_change_count": {
+            "turn_count": 0,
+            "left": 0,
+            "right": 0
+        },
+        "illegal_way_bus_lane": {
+            "violation_detected": false,
+            "violation_ranges": []
+        },
+        "driving_scores": {
+            "overall_score": 94,
+            "safety_score": 88,
+            "compliance_score": 100,
+            "efficiency_score": 100,
+            "category": "Excellent",
+            "category_description": "Outstanding performance exceeding safety standards",
+            "category_color": "green",
+            "metrics_used": {
+                "close_encounters": 1,
+                "traffic_violations": 0,
+                "bus_lane_violations": 0,
+                "lane_changes": 0
+            }
+        }
+    },
+    "new01.mp4": {
+        "video_filename": "new01.mp4",
+        "video_metadata": {
+            "duration_seconds": 29.76,
+            "fps": 25,
+            "frame_count": 744,
+            "resolution": {
+                "width": 1280,
+                "height": 720
+            }
+        },
+        "average_speed_kmph": 24.6299991607666,
+        "safety_violation": 0,
+        "traffic_signal_summary": {
+            "violations": [],
+            "traffic_violation_windows": [],
+            "violation": false
+        },
+        "close_encounters": {
+            "close_encounters": [],
+            "event_count": 0,
+            "method": "enhanced_proximity_v2"
+        },
+        "turn_changes_orb": {
+            "turn_count": 0,
+            "left": 0,
+            "right": 0
+        },
+        "lane_change_count": {
+            "turn_count": 5,
+            "left": 2,
+            "right": 3
+        },
+        "illegal_way_bus_lane": {
+            "violation_detected": false,
+            "violation_ranges": []
+        },
+        "driving_scores": {
+            "overall_score": 100,
+            "safety_score": 100,
+            "compliance_score": 100,
+            "efficiency_score": 98,
+            "category": "Excellent",
+            "category_description": "Outstanding performance exceeding safety standards",
+            "category_color": "green",
+            "metrics_used": {
+                "close_encounters": 0,
+                "traffic_violations": 0,
+                "bus_lane_violations": 0,
+                "lane_changes": 5
+            }
+        }
+    }
+}

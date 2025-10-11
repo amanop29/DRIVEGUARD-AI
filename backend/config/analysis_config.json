@@ -1,0 +1,158 @@
+{
+  "model": {
+    "name": "yolov8s.pt",
+    "confidence_threshold": 0.25,
+    "iou_threshold": 0.45,
+    "device": "cpu"
+  },
+  "processing": {
+    "frame_skip": 3,
+    "target_width": 896,
+    "processing_fps": 8.0
+  },
+  "detection": {
+    "close_encounter_threshold_pixels": 100,
+    "close_encounter_severity_thresholds": {
+      "critical": 50,
+      "high": 100,
+      "medium": 200,
+      "low": 300
+    },
+    "traffic_signal_detection": {
+      "enabled": true,
+      "hsv_red_ranges": [
+        [
+          [
+            0,
+            100,
+            100
+          ],
+          [
+            10,
+            255,
+            255
+          ]
+        ],
+        [
+          [
+            170,
+            100,
+            100
+          ],
+          [
+            180,
+            255,
+            255
+          ]
+        ]
+      ]
+    },
+    "bus_lane_detection": {
+      "enabled": true,
+      "hsv_yellow_range": [
+        [
+          20,
+          100,
+          100
+        ],
+        [
+          30,
+          255,
+          255
+        ]
+      ]
+    }
+  },
+  "calibration": {
+    "default_pixels_per_meter": 25.0,
+    "default_reference_distance_pixels": 150,
+    "default_reference_distance_meters": 6.0
+  },
+  "scoring": {
+    "weights": {
+      "safety": 0.4,
+      "compliance": 0.3,
+      "efficiency": 0.2,
+      "smoothness": 0.1
+    },
+    "penalties": {
+      "close_encounter": 8,
+      "tailgating": 10,
+      "hard_braking": 5,
+      "rapid_acceleration": 3,
+      "traffic_violation": 40,
+      "bus_lane_violation": 30,
+      "speed_violation": 25,
+      "lane_change": 0.5,
+      "swerving": 15
+    }
+  },
+  "speed_limit": 60,
+  "enhanced_features": {
+    "tailgating_detection": {
+      "enabled": true,
+      "safe_following_seconds": 3,
+      "critical_threshold_multiplier": 0.5
+    },
+    "lane_departure_detection": {
+      "enabled": true,
+      "swerving_threshold": 4
+    },
+    "aggressive_driving_detection": {
+      "enabled": true,
+      "rapid_acceleration_threshold": 15,
+      "hard_braking_threshold": -15,
+      "time_window_frames": 30
+    },
+    "speed_violation_detection": {
+      "enabled": true,
+      "tolerance_kmh": 0
+    },
+    "weather_detection": {
+      "enabled": true,
+      "sample_at_percentage": 0.1
+    }
+  },
+  "available_models": {
+    "yolov8n.pt": {
+      "name": "YOLOv8 Nano",
+      "size_mb": 6.2,
+      "speed": "Very Fast",
+      "accuracy": "Good",
+      "mAP": "50-60",
+      "description": "Lightweight, fastest processing, good for real-time"
+    },
+    "yolov8s.pt": {
+      "name": "YOLOv8 Small",
+      "size_mb": 22,
+      "speed": "Fast",
+      "accuracy": "Better",
+      "mAP": "65-70",
+      "description": "Best balance of speed and accuracy - RECOMMENDED"
+    },
+    "yolov8m.pt": {
+      "name": "YOLOv8 Medium",
+      "size_mb": 52,
+      "speed": "Moderate",
+      "accuracy": "Excellent",
+      "mAP": "70-75",
+      "description": "High accuracy, moderate speed"
+    },
+    "yolov8l.pt": {
+      "name": "YOLOv8 Large",
+      "size_mb": 87,
+      "speed": "Slower",
+      "accuracy": "Very High",
+      "mAP": "75-80",
+      "description": "Very high accuracy, requires more processing power"
+    },
+    "yolov8x.pt": {
+      "name": "YOLOv8 XLarge",
+      "size_mb": 131,
+      "speed": "Slowest",
+      "accuracy": "Highest",
+      "mAP": "80-85",
+      "description": "Maximum accuracy, GPU recommended"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+    "video_filename": "Dashcam001.mp4",
+    "video_metadata": {
+        "duration_seconds": 29.88,
+        "fps": 25.0,
+        "frame_count": 747,
+        "resolution": {
+            "width": 1280,
+            "height": 720
+        }
+    },
+    "average_speed_kmph": 19.700000762939453,
+    "safety_violation": 0,
+    "traffic_signal_summary": {
+        "violations": [],
+        "traffic_violation_windows": [],
+        "violation": false
+    },
+    "close_encounters": {
+        "close_encounters": [],
+        "event_count": 0,
+        "method": "enhanced_proximity_v2"
+    },
+    "turn_changes_orb": {
+        "turn_count": 0,
+        "left": 0,
+        "right": 0
+    },
+    "lane_change_count": {
+        "turn_count": 4,
+        "left": 2,
+        "right": 2
+    },
+    "illegal_way_bus_lane": {
+        "violation_detected": false,
+        "violation_ranges": []
+    },
+    "driving_scores": {
+        "overall_score": 100,
+        "safety_score": 100,
+        "compliance_score": 100,
+        "efficiency_score": 98,
+        "category": "Excellent",
+        "category_description": "Outstanding performance exceeding safety standards",
+        "category_color": "green",
+        "metrics_used": {
+            "close_encounters": 0,
+            "traffic_violations": 0,
+            "bus_lane_violations": 0,
+            "lane_changes": 4
+        }
+    }
+}

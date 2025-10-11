@@ -1,0 +1,27 @@
+{
+  "Dashcam001.mp4": {
+    "meters_per_pixel": 0.20,
+    "roi_top": 0.5,
+    "roi_bottom": 0.8
+  },
+  "Dashcam002.mp4": {
+    "meters_per_pixel": 0.20,
+    "roi_top": 0.5,
+    "roi_bottom": 0.8
+  },
+  "Dashcam003.mp4": {
+    "meters_per_pixel": 0.20,
+    "roi_top": 0.5,
+    "roi_bottom": 0.8
+  },
+  "Dashcam004.mp4": {
+    "meters_per_pixel": 0.15,
+    "roi_top": 0.5,
+    "roi_bottom": 0.8
+  },
+  "speed-highway.mp4": {
+    "meters_per_pixel": 0.70,
+    "roi_top": 0.5,
+    "roi_bottom": 0.8
+  }
+}

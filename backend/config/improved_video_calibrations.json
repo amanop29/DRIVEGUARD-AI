@@ -1,0 +1,32 @@
+{
+  "Dashcam001.mp4": {
+    "meters_per_pixel": 10.0,
+    "roi_top": 0.6,
+    "roi_bottom": 0.9
+  },
+  "Dashcam002.mp4": {
+    "meters_per_pixel": 6.0,
+    "roi_top": 0.6,
+    "roi_bottom": 0.9
+  },
+  "Dashcam003.mp4": {
+    "meters_per_pixel": 2.0,
+    "roi_top": 0.6,
+    "roi_bottom": 0.9
+  },
+  "Dashcam004.mp4": {
+    "meters_per_pixel": 1.5,
+    "roi_top": 0.6,
+    "roi_bottom": 0.9
+  },
+  "test00.mp4": {
+    "meters_per_pixel": 0.1,
+    "roi_top": 0.5,
+    "roi_bottom": 0.8
+  },
+  "test001.mp4": {
+    "meters_per_pixel": 0.1,
+    "roi_top": 0.5,
+    "roi_bottom": 0.8
+  }
+}

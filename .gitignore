@@ -37,8 +37,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Videos (large files - optional, uncomment if you want to exclude)
-# videos/*.mp4
-# backend/videos/*.mp4
+videos/*.mp4
+backend/videos/*.mp4
 
 # Analysis outputs (optional, uncomment if you want to exclude)
 # outputs/

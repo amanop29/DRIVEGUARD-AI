@@ -461,7 +461,7 @@ Complete navigation guide to all documentation.
 
 ## 🎨 Design
 
-Original design by: https://www.figma.com/design/k05FZU8QC8vDABektPTXBx/DRIVEGUARD-AI
+FIGMA: https://driveguard.figma.site
 
 ## 🚦 Current Status
 
@@ -510,6 +510,6 @@ Having issues? Check:
 **Made with ❤️ for safer driving**
 
 **Version**: 1.0.0  
-**Last Updated**: January 2025  
+**Last Updated**: OCTOBER 2025  
 **Status**: 🟢 Production Ready (Development Mode)
   

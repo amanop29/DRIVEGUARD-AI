@@ -246,40 +246,6 @@ DRIVEGUARD AI/
 └─────────────────┘  - Score calculation
 ```
 
-## 📁 Project Structure
-
-```
-/
-├── server.js                           # Backend API server
-├── start.sh                            # Quick start script
-├── package.json                        # Node.js dependencies
-├── README.md                           # This file
-├── QUICK_START.md                      # Quick start guide
-├── REALTIME_PROCESSING.md              # Detailed system docs
-├── REALTIME_IMPLEMENTATION.md          # Implementation details
-├── /videos/                            # Uploaded videos
-├── /AD Aman/
-│   ├── analyze_single_video.py         # Single video analysis
-│   ├── main_v2.py                      # Core analysis engine
-│   ├── driving_score_calculator.py     # Score calculation
-│   ├── video_calibrations.json         # Calibration settings
-│   ├── merged_output_analysis.json     # All results (backend)
-│   └── {filename}_analysis.json        # Individual results
-├── /public/AD Aman/
-│   └── merged_output_analysis.json     # Frontend-accessible
-└── /src/
-    ├── App.tsx                         # Main app component
-    ├── /components/
-    │   ├── VideoUpload.tsx             # Upload interface
-    │   ├── AnalysisDashboard.tsx       # Results dashboard
-    │   ├── AnalysisCharts.tsx          # Interactive charts
-    │   ├── DrivingScore.tsx            # Score display
-    │   └── ...
-    └── /utils/
-        ├── analysisData.ts             # Data loading
-        ├── videoScoreData.ts           # Score configuration
-        └── speedChartData.ts           # Chart data
-```
 
 ## 🔧 Configuration
 

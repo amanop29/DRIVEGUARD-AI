@@ -1,28 +1,21 @@
 # DRIVEGUARD AI 🚗💨
 
-[![Status](https://img.shields.io/badge/status-deployed-success)](https://amanop29.github.io/DRIVEGUARD-AI/)
+[![Status](https://img.shields.io/badge/status-operational-green)]()
 [![Version](https://img.shields.io/badge/version-2.0.0-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-purple)]()
-[![Frontend](https://img.shields.io/badge/frontend-React%20%2B%20TypeScript-61DAFB)]()
-[![Backend](https://img.shields.io/badge/backend-Node.js%20%2B%20Python-339933)]()
+[![Structure](https://img.shields.io/badge/structure-reorganized-orange)]()
 
-**AI-Powered Dashcam Video Analysis with Real-Time Processing & Fleet Management**
+**AI-Powered Dashcam Video Analysis with Real-Time Processing**
 
-DriveGuard AI analyzes dashcam footage to provide comprehensive driving safety scores, behavior insights, and actionable recommendations. Features **real-time video processing**, **YOLOv8 object detection**, and **multi-account fleet management**.
+DriveGuardAI analyzes dashcam footage to provide comprehensive driving safety scores, behavior insights, and actionable recommendations. Now with **real-time video processing** - upload any video and get instant analysis!
 
-> **🎉 Latest Update:** Fully deployed with optimized Docker containers & production-ready infrastructure (November 2025)
+> **📦 NEW:** Project reorganized with clean Frontend/Backend structure (October 2025)
 
-## 🌐 Live Application
+## 🌐 Live Demo
 
-### 🎯 Production Deployments
+🚀 **Try it now**: [https://amanop29.github.io/DRIVEGUARD-AI/](https://amanop29.github.io/DRIVEGUARD-AI/)
 
-| Component | Status | URL | Platform |
-|-----------|--------|-----|----------|
-| **Frontend** | ✅ Live | [amanop29.github.io/DRIVEGUARD-AI](https://amanop29.github.io/DRIVEGUARD-AI/) | GitHub Pages |
-| **Backend API** | 🚀 Ready | Deploy with Railway/Render | Docker Container |
-| **Repository** | 📦 Public | [github.com/amanop29/DRIVEGUARD-AI](https://github.com/amanop29/DRIVEGUARD-AI) | GitHub |
-
-> **Note**: Frontend is live with sample data. Deploy the backend for full video upload and analysis functionality. See [Quick Deploy](#-quick-deploy) below.
+> **Note**: The live demo showcases the UI with sample data. For full video upload and analysis functionality, you'll need to run the backend locally or deploy it separately. See [DEPLOYMENT.md](./DEPLOYMENT.md) for details.
 
 ## ✨ Key Features
 
@@ -55,81 +48,51 @@ DriveGuard AI analyzes dashcam footage to provide comprehensive driving safety s
 - **Individual Accounts** - Personal driving analysis
 - **Enterprise Accounts** - Fleet management with driver/vehicle tracking
 
-## 🚀 Quick Deploy
+## 🚀 Quick Start
 
-### Option 1: Deploy Backend to Railway (Recommended - 10 minutes)
-
+### Option 1: Automated Start (Recommended)
 ```bash
-# Run the interactive deployment script
-./deploy-backend.sh
+./start.sh
+```
+Starts both backend API and frontend dev server automatically!
+
+### Option 2: Manual Start
+
+**Backend Server:**
+```bash
+cd backend
+node server.js
+# Backend API running on http://localhost:3001
 ```
 
-Or manually:
-1. Visit [railway.app](https://railway.app) and sign in with GitHub
-2. Create New Project → Deploy from GitHub repo
-3. Select `amanop29/DRIVEGUARD-AI`
-4. Railway auto-detects the Dockerfile
-5. Set environment variables: `NODE_ENV=production`, `PORT=3001`
-6. Deploy! Get your backend URL
-
-**Cost**: $5 free credit/month (enough for development/testing)
-
-### Option 2: Local Development
-
-**Install Dependencies:**
+**Frontend Dev Server (in new terminal):**
 ```bash
-# Backend
-cd backend
-npm install
-pip3 install -r config/requirements.minimal.txt
-
-# Frontend
-cd ../frontend
-npm install
-```
-
-**Start Services:**
-```bash
-# Terminal 1 - Backend (API + Python Analysis)
-cd backend
-npm start
-# Running on http://localhost:3001
-
-# Terminal 2 - Frontend (React UI)
 cd frontend
 npm run dev
-# Running on http://localhost:5173
+# Frontend UI running on http://localhost:5173
 ```
 
-Then open **http://localhost:5173** in your browser!
-
-### Option 3: Docker (Production-like Environment)
-
+**Python Analysis Only (no web interface):**
 ```bash
-# Build and run with Docker
 cd backend
-docker build -t driveguard-backend .
-docker run -p 3001:3001 driveguard-backend
+python analysis/main_v2.py
+# Processes all videos in backend/videos/
 ```
+
+Then open **http://localhost:5173** and start uploading videos!
 
 ## 📋 Prerequisites
 
-### For Deployment (Recommended Path)
-- **GitHub Account** (for Railway/Render deployment)
-- **Web Browser** (to access the dashboard)
-- That's it! Railway/Render handles everything else
-
-### For Local Development
+### Required Software
 - **Node.js** v16+ ([Download](https://nodejs.org/))
 - **Python** 3.8+ ([Download](https://www.python.org/))
 - **npm** (comes with Node.js)
-- **Git** (for cloning the repository)
 
-### System Requirements (Local Development)
+### System Requirements
 - **RAM**: 8GB minimum, 16GB recommended
-- **Storage**: 10GB free space (5GB with minimal dependencies)
-- **OS**: macOS, Linux, Windows (WSL2 recommended for Windows)
-- **GPU**: Optional (for faster YOLO processing, speeds up analysis 3-5x)
+- **Storage**: 20GB free space
+- **OS**: macOS, Linux, or Windows
+- **GPU**: Optional (for faster YOLO processing)
 
 ## 📦 Installation
 
@@ -494,158 +457,82 @@ FIGMA: https://driveguard.figma.site
 - [ ] PDF report generation
 - [ ] Advanced analytics
 
-## 📦 Production Deployment
+## 📦 Deployment
 
-### Frontend Deployment (GitHub Pages) ✅ LIVE
+### Frontend Deployment (GitHub Pages) ✅
 
-The frontend is **already deployed** and live:
+The frontend is automatically deployed to GitHub Pages:
 
-- **URL**: https://amanop29.github.io/DRIVEGUARD-AI/
-- **Auto-Deploy**: Every push to `main` branch automatically rebuilds and deploys
-- **Build Time**: 2-3 minutes via GitHub Actions
-- **Status**: Check [Actions tab](https://github.com/amanop29/DRIVEGUARD-AI/actions)
+- **Live URL**: https://amanop29.github.io/DRIVEGUARD-AI/
+- **Auto-Deploy**: Pushes to `main` branch trigger automatic deployment
+- **Status**: Check the Actions tab in GitHub for deployment status
+- **Build Time**: 2-3 minutes
 
-### Backend Deployment 🚀 Deploy in 10 Minutes
+### Backend Deployment 🚀
 
-The backend requires Docker-capable hosting. Choose one:
+The backend (Node.js + Python) requires a separate hosting platform:
 
-#### Option 1: Railway.app (⭐ Recommended)
+#### Recommended: Railway.app (⭐ Best Option)
 
-**Why Railway?**
-- ✅ $5 free credit/month (enough for testing)
-- ✅ Auto-detects Dockerfile
-- ✅ Easy environment variables
-- ✅ Always-on (no cold starts)
-- ✅ Built-in SSL certificates
-
-**Deploy Steps:**
 ```bash
-# Interactive script
+# Quick start
 ./deploy-backend.sh
 ```
 
-**Or manually:**
-1. Go to [railway.app](https://railway.app) → Sign in with GitHub
-2. "New Project" → "Deploy from GitHub repo"
+**Manual Steps**:
+1. Visit [railway.app](https://railway.app) and sign in with GitHub
+2. Create New Project → Deploy from GitHub repo
 3. Select `amanop29/DRIVEGUARD-AI`
-4. Railway detects Dockerfile automatically
-5. Add environment variables:
-   ```
-   NODE_ENV=production
-   PORT=3001
-   FRONTEND_URL=https://amanop29.github.io/DRIVEGUARD-AI
-   ```
-6. Click "Deploy" → Wait 3-5 minutes
-7. Copy your backend URL (e.g., `https://driveguard-ai-production.up.railway.app`)
+4. Set environment variables:
+   - `NODE_ENV=production`
+   - `PORT=3001`
+   - `FRONTEND_URL=https://amanop29.github.io/DRIVEGUARD-AI`
+5. Deploy! Railway auto-detects the Dockerfile
 
-#### Option 2: Render.com (Free Tier Available)
+**Cost**: $5 free credit/month (sufficient for development)
 
-**Why Render?**
-- ✅ Free tier available (with limitations)
-- ✅ Docker support
-- ⚠️ Spins down after 15min inactivity (free tier)
-- 💰 $7/month for always-on
+#### Alternative: Render.com
 
-**Deploy Steps:**
-1. Go to [render.com](https://render.com) → Sign in with GitHub
-2. "New +" → "Web Service"
-3. Connect repo: `amanop29/DRIVEGUARD-AI`
-4. Configure:
-   - **Environment**: Docker
-   - **Branch**: main
-   - **Environment Variables**: Same as Railway above
-5. Click "Create Web Service"
-6. Wait for deployment (5-7 minutes)
-7. Copy your service URL
+1. Visit [render.com](https://render.com)
+2. New Web Service → Connect GitHub repo
+3. Select Docker environment
+4. Configure environment variables
+5. Deploy
 
-#### Option 3: Docker (Self-Hosted/Cloud)
+**Cost**: Free tier (sleeps after inactivity) or $7/month for always-on
 
-**For AWS, DigitalOcean, or Local Hosting:**
+#### Local Development
 
 ```bash
-# Build the optimized image
+# Backend
 cd backend
-docker build -t driveguard-backend .
-
-# Run container
-docker run -d \
-  -p 3001:3001 \
-  -e NODE_ENV=production \
-  -e FRONTEND_URL=https://amanop29.github.io/DRIVEGUARD-AI \
-  --name driveguard-backend \
-  driveguard-backend
-
-# Check logs
-docker logs driveguard-backend
-
-# Test health endpoint
-curl http://localhost:3001/api/health
+npm install
+npm start
+# Runs on http://localhost:3001
 ```
 
-**Image Details:**
-- Base: `node:20-slim`
-- Size: ~1.5-2GB (optimized from 12GB)
-- Python deps: opencv-headless, numpy, ultralytics, scipy
-- Node deps: express, multer, cors
+### After Backend Deployment
 
-### Connect Frontend to Backend
+1. **Get Backend URL** from Railway/Render dashboard
+2. **Update Frontend**: Edit `frontend/src/App.tsx` with your backend URL
+3. **Commit & Push**: Frontend will auto-redeploy with new API endpoint
+4. **Test**: Upload a video and verify analysis works
 
-After deploying backend, update frontend to use it:
+**📖 Detailed Guides**:
+- Backend Deployment: [docs/BACKEND_DEPLOYMENT.md](./docs/BACKEND_DEPLOYMENT.md)
+- Full Stack Setup: [DEPLOYMENT.md](./DEPLOYMENT.md)
 
-1. **Get your backend URL** from Railway/Render dashboard
+### Deployment Options:
 
-2. **Update API configuration:**
-   - Open `frontend/src/App.tsx` or API config file
-   - Find `API_BASE_URL` constant
-   - Replace with your backend URL:
-     ```typescript
-     const API_BASE_URL = 'https://your-backend-url.railway.app';
-     ```
+| Option | Frontend | Backend | Cost | Setup Time |
+|--------|----------|---------|------|------------|
+| **Demo/Portfolio** | GitHub Pages | Not needed | FREE | 5 min |
+| **Testing/Small Team** | GitHub Pages | Render (free tier) | FREE* | 30 min |
+| **Production** | Vercel/CloudFront | AWS/Railway | $20-100/mo | 2-4 hrs |
 
-3. **Commit and push:**
-   ```bash
-   git add .
-   git commit -m "Connect frontend to production backend"
-   git push origin main
-   ```
+*Free tiers have usage limitations
 
-4. **Wait for auto-deploy** (2-3 minutes)
-
-5. **Test end-to-end:**
-   - Visit https://amanop29.github.io/DRIVEGUARD-AI/
-   - Upload a test video
-   - Verify analysis completes
-
-### Cost Comparison
-
-| Platform | Free Tier | Paid Tier | Best For |
-|----------|-----------|-----------|----------|
-| **Railway** | $5 credit/month | $5/month+ | Development & Production |
-| **Render** | 750 hrs/month | $7/month | Small projects |
-| **GitHub Pages** | Unlimited | FREE | Frontend hosting |
-| **Docker (self-host)** | - | Server costs | Full control |
-
-### Deployment Troubleshooting
-
-**Issue: Backend build fails**
-- Check Docker logs in Railway/Render dashboard
-- Verify `requirements.minimal.txt` exists
-- Ensure `PIP_BREAK_SYSTEM_PACKAGES=1` is in Dockerfile
-
-**Issue: Video upload fails**
-- Check backend health: `curl https://your-backend/api/health`
-- Verify CORS is configured (already set up)
-- Check file size limit (500MB max)
-
-**Issue: Analysis not running**
-- Check Python dependencies installed
-- View backend logs for Python errors
-- Ensure YOLO model downloads successfully
-
-**Issue: Frontend not updating**
-- Check GitHub Actions for deployment status
-- Clear browser cache (Ctrl+Shift+R)
-- Verify changes pushed to `main` branch
+**📖 Full deployment guide**: [DEPLOYMENT.md](./DEPLOYMENT.md)
 
 ## �📄 License
 

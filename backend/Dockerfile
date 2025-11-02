@@ -5,6 +5,7 @@ FROM node:20-slim
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 \
     python3-pip \
+    python3-venv \
     python3-dev \
     gcc \
     g++ \
@@ -16,6 +17,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ffmpeg \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
+
+# Fix pip for Debian bookworm - create a virtual environment or use --break-system-packages
+ENV PIP_BREAK_SYSTEM_PACKAGES=1
 
 WORKDIR /app/backend
 

@@ -1,50 +1,32 @@
-# Multi-stage build for DriveGuard AI Backend
-FROM python:3.10-slim as python-base
-
-# Install system dependencies for OpenCV and video processing
-RUN apt-get update && apt-get install -y \
-    libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    libxrender-dev \
-    libgomp1 \
-    libgthread-2.0-0 \
-    ffmpeg \
-    && rm -rf /var/lib/apt/lists/*
-
-WORKDIR /app
-
-# Copy Python requirements
-COPY backend/config/requirements.txt ./backend/config/
-
-# Install Python dependencies
-RUN pip install --no-cache-dir -r backend/config/requirements.txt
-
-# Node.js stage
+# Lightweight single-stage Dockerfile for DriveGuard AI Backend
 FROM node:20-slim
 
-# Install Python and system dependencies
-RUN apt-get update && apt-get install -y \
+# Install Python 3 and minimal dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 \
     python3-pip \
+    python3-dev \
+    gcc \
+    g++ \
     libglib2.0-0 \
     libsm6 \
     libxext6 \
-    libxrender-dev \
+    libxrender1 \
     libgomp1 \
     ffmpeg \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
 
-WORKDIR /app
-
-# Copy Python dependencies from python-base
-COPY --from=python-base /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
-COPY --from=python-base /usr/local/bin /usr/local/bin
-
-# Copy backend files
-COPY backend/package*.json ./backend/
 WORKDIR /app/backend
-RUN npm ci --only=production
+
+# Copy and install Node.js dependencies first (better caching)
+COPY backend/package*.json ./
+RUN npm ci --only=production && npm cache clean --force
+
+# Copy and install minimal Python dependencies
+COPY backend/config/requirements.minimal.txt ./config/
+RUN pip3 install --no-cache-dir -r config/requirements.minimal.txt && \
+    rm -rf /root/.cache/pip
 
 # Copy application files
 COPY backend/ .

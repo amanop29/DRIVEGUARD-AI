@@ -12,13 +12,13 @@ RUN apt-get update && apt-get install -y \
     ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app/backend
+WORKDIR /app
 
 # Copy Python requirements
-COPY config/requirements.txt ./config/
+COPY backend/config/requirements.txt ./backend/config/
 
 # Install Python dependencies
-RUN pip install --no-cache-dir -r config/requirements.txt
+RUN pip install --no-cache-dir -r backend/config/requirements.txt
 
 # Node.js stage
 FROM node:20-slim
@@ -35,18 +35,19 @@ RUN apt-get update && apt-get install -y \
     ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app/backend
+WORKDIR /app
 
 # Copy Python dependencies from python-base
 COPY --from=python-base /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
 COPY --from=python-base /usr/local/bin /usr/local/bin
 
 # Copy backend files
-COPY package*.json ./
+COPY backend/package*.json ./backend/
+WORKDIR /app/backend
 RUN npm ci --only=production
 
 # Copy application files
-COPY . .
+COPY backend/ .
 
 # Create necessary directories
 RUN mkdir -p videos outputs/analysis outputs/logs data

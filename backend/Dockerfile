@@ -1,42 +1,47 @@
-# Lightweight single-stage Dockerfile for DriveGuard AI Backend
-FROM node:20-slim
+# Ultra-lightweight Dockerfile for DriveGuard AI Backend
+# Optimized to be under 2GB (Railway free tier compatible)
+FROM node:20-alpine
 
-# Install Python 3 and minimal dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
+# Install Python 3 and only essential dependencies
+RUN apk add --no-cache \
     python3 \
-    python3-pip \
-    python3-venv \
-    python3-dev \
+    py3-pip \
+    py3-numpy \
     gcc \
     g++ \
-    libglib2.0-0 \
-    libsm6 \
-    libxext6 \
-    libxrender1 \
-    libgomp1 \
+    musl-dev \
+    python3-dev \
+    linux-headers \
     ffmpeg \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get clean
+    && ln -sf python3 /usr/bin/python
 
-# Fix pip for Debian bookworm - create a virtual environment or use --break-system-packages
+# Fix pip for modern Python
 ENV PIP_BREAK_SYSTEM_PACKAGES=1
 
 WORKDIR /app/backend
 
-# Copy and install Node.js dependencies first (better caching)
+# Copy and install Node.js dependencies (with production flag)
 COPY backend/package*.json ./
-RUN npm ci --only=production && npm cache clean --force
+RUN npm ci --only=production --omit=dev && \
+    npm cache clean --force && \
+    rm -rf /tmp/*
 
-# Copy and install minimal Python dependencies
+# Copy and install ultra-minimal Python dependencies
 COPY backend/config/requirements.minimal.txt ./config/
-RUN pip3 install --no-cache-dir -r config/requirements.minimal.txt && \
-    rm -rf /root/.cache/pip
+RUN pip3 install --no-cache-dir \
+    --no-deps \
+    opencv-python-headless==4.8.1.78 && \
+    rm -rf /root/.cache/pip /tmp/* /var/cache/apk/*
 
-# Copy application files
-COPY backend/ .
+# Copy only necessary application files
+COPY backend/server.js ./
+COPY backend/analysis ./analysis
+COPY backend/config ./config
+COPY backend/data ./data
+COPY backend/utils ./utils
 
 # Create necessary directories
-RUN mkdir -p videos outputs/analysis outputs/logs data
+RUN mkdir -p videos outputs/analysis outputs/logs data models
 
 # Expose port
 EXPOSE 3001

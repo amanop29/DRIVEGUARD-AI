@@ -1,5 +1,7 @@
-# Core dependencies for DriveGuard AI video analysis
-numpy
-opencv-python-headless
-ultralytics
-scipy
+# Ultra-minimal dependencies for DriveGuard AI video analysis
+# Optimized to stay under Railway's 4.8GB limit
+numpy==1.24.3
+opencv-python-headless==4.8.1.78
+# Note: ultralytics with torch is ~6GB. For Railway deployment,
+# you may need to use a paid tier or switch to a lighter model.
+# Alternative: Pre-process videos locally and upload results only.

@@ -27,6 +27,7 @@ ENV/
 
 # OS
 .DS_Store
+**/.DS_Store
 Thumbs.db
 
 # Logs
@@ -46,14 +47,18 @@ backend/videos/*.mov
 
 # Analysis outputs (keep structure, ignore large outputs)
 backend/outputs/analysis/*.json
-backend/outputs/enhanced_analysis/*.json
+backend/outputs/enhanced_analysis/
 backend/outputs/logs/*.log
+backend/outputs/logs/*.png
 
 # Temporary files
 *.tmp
 *.temp
 *.bak
 *.backup
+Dockerfile.backup
+Dockerfile.optimized
+*.json.backup
 
 # Model files (large files - YOLO models)
 *.pt

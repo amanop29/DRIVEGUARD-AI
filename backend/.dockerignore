@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+*.md
+.env
+.DS_Store
+videos/*.mp4
+videos/*.avi
+videos/*.mov
+models/yolov8*.pt
+outputs/
+__pycache__
+*.pyc
+.pytest_cache

@@ -457,22 +457,70 @@ FIGMA: https://driveguard.figma.site
 - [ ] PDF report generation
 - [ ] Advanced analytics
 
-## � Deployment
+## 📦 Deployment
 
-### Quick Deploy to GitHub Pages (Frontend)
+### Frontend Deployment (GitHub Pages) ✅
 
-The project is configured for automatic deployment to GitHub Pages:
+The frontend is automatically deployed to GitHub Pages:
 
-1. **Push to main branch** - deployment happens automatically
-2. **Live in 2-3 minutes** at: https://amanop29.github.io/DRIVEGUARD-AI/
+- **Live URL**: https://amanop29.github.io/DRIVEGUARD-AI/
+- **Auto-Deploy**: Pushes to `main` branch trigger automatic deployment
+- **Status**: Check the Actions tab in GitHub for deployment status
+- **Build Time**: 2-3 minutes
 
-### Full Stack Deployment
+### Backend Deployment 🚀
 
-For complete functionality with backend (video upload/analysis):
+The backend (Node.js + Python) requires a separate hosting platform:
 
-- **Frontend**: GitHub Pages (FREE) ✅
-- **Backend**: Render.com, Railway.app, or AWS
-- **See**: [DEPLOYMENT.md](./DEPLOYMENT.md) for comprehensive guide
+#### Recommended: Railway.app (⭐ Best Option)
+
+```bash
+# Quick start
+./deploy-backend.sh
+```
+
+**Manual Steps**:
+1. Visit [railway.app](https://railway.app) and sign in with GitHub
+2. Create New Project → Deploy from GitHub repo
+3. Select `amanop29/DRIVEGUARD-AI`
+4. Set environment variables:
+   - `NODE_ENV=production`
+   - `PORT=3001`
+   - `FRONTEND_URL=https://amanop29.github.io/DRIVEGUARD-AI`
+5. Deploy! Railway auto-detects the Dockerfile
+
+**Cost**: $5 free credit/month (sufficient for development)
+
+#### Alternative: Render.com
+
+1. Visit [render.com](https://render.com)
+2. New Web Service → Connect GitHub repo
+3. Select Docker environment
+4. Configure environment variables
+5. Deploy
+
+**Cost**: Free tier (sleeps after inactivity) or $7/month for always-on
+
+#### Local Development
+
+```bash
+# Backend
+cd backend
+npm install
+npm start
+# Runs on http://localhost:3001
+```
+
+### After Backend Deployment
+
+1. **Get Backend URL** from Railway/Render dashboard
+2. **Update Frontend**: Edit `frontend/src/App.tsx` with your backend URL
+3. **Commit & Push**: Frontend will auto-redeploy with new API endpoint
+4. **Test**: Upload a video and verify analysis works
+
+**📖 Detailed Guides**:
+- Backend Deployment: [docs/BACKEND_DEPLOYMENT.md](./docs/BACKEND_DEPLOYMENT.md)
+- Full Stack Setup: [DEPLOYMENT.md](./DEPLOYMENT.md)
 
 ### Deployment Options:
 

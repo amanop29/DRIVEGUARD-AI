@@ -11,6 +11,12 @@ DriveGuardAI analyzes dashcam footage to provide comprehensive driving safety sc
 
 > **📦 NEW:** Project reorganized with clean Frontend/Backend structure (October 2025)
 
+## 🌐 Live Demo
+
+🚀 **Try it now**: [https://amanop29.github.io/DRIVEGUARD-AI/](https://amanop29.github.io/DRIVEGUARD-AI/)
+
+> **Note**: The live demo showcases the UI with sample data. For full video upload and analysis functionality, you'll need to run the backend locally or deploy it separately. See [DEPLOYMENT.md](./DEPLOYMENT.md) for details.
+
 ## ✨ Key Features
 
 ### 🎥 Real-Time Video Processing
@@ -485,7 +491,36 @@ Original design by: https://www.figma.com/design/k05FZU8QC8vDABektPTXBx/DRIVEGUA
 - [ ] PDF report generation
 - [ ] Advanced analytics
 
-## 📄 License
+## � Deployment
+
+### Quick Deploy to GitHub Pages (Frontend)
+
+The project is configured for automatic deployment to GitHub Pages:
+
+1. **Push to main branch** - deployment happens automatically
+2. **Live in 2-3 minutes** at: https://amanop29.github.io/DRIVEGUARD-AI/
+
+### Full Stack Deployment
+
+For complete functionality with backend (video upload/analysis):
+
+- **Frontend**: GitHub Pages (FREE) ✅
+- **Backend**: Render.com, Railway.app, or AWS
+- **See**: [DEPLOYMENT.md](./DEPLOYMENT.md) for comprehensive guide
+
+### Deployment Options:
+
+| Option | Frontend | Backend | Cost | Setup Time |
+|--------|----------|---------|------|------------|
+| **Demo/Portfolio** | GitHub Pages | Not needed | FREE | 5 min |
+| **Testing/Small Team** | GitHub Pages | Render (free tier) | FREE* | 30 min |
+| **Production** | Vercel/CloudFront | AWS/Railway | $20-100/mo | 2-4 hrs |
+
+*Free tiers have usage limitations
+
+**📖 Full deployment guide**: [DEPLOYMENT.md](./DEPLOYMENT.md)
+
+## �📄 License
 
 MIT License - See LICENSE file for details
 

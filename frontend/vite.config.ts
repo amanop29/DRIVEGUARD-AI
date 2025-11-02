@@ -52,8 +52,9 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'build',
+      outDir: 'dist',
     },
+    base: process.env.NODE_ENV === 'production' ? '/DRIVEGUARD-AI/' : '/',
     server: {
       port: 5173,
       open: true,

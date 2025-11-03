@@ -182,6 +182,22 @@ const db = {
       
       if (error && error.code !== 'PGRST116') throw error;
       return data;
+    },
+
+    // Update storage info
+    async updateStorageInfo(videoId, storageInfo) {
+      const { data, error } = await supabase
+        .from('videos')
+        .update({
+          storage_url: storageInfo.storageUrl,
+          storage_path: storageInfo.storagePath
+        })
+        .eq('id', videoId)
+        .select()
+        .single();
+      
+      if (error) throw error;
+      return data;
     }
   },
 

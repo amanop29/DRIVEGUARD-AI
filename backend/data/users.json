@@ -11,9 +11,22 @@
       "carNumber": "TEST-001",
       "organizationId": "org_test_001",
       "createdAt": "2024-01-01T00:00:00.000Z",
-      "lastLogin": "2025-11-01T15:35:44.866Z",
+      "lastLogin": "2025-11-02T21:17:02.905Z",
       "status": "active",
       "analyses": [
+        {
+          "id": "1762118337740",
+          "fileName": "speed-highway.mp4",
+          "date": "03/11/2025",
+          "score": 96,
+          "duration": "0m29s",
+          "carNumber": "TEST-001",
+          "userId": "1@test.in",
+          "userEmail": "1@test.in",
+          "userName": "JATIN OP ",
+          "isFromAffiliatedUser": false,
+          "savedAt": "2025-11-02T21:18:57.779Z"
+        },
         {
           "id": "1762011510833",
           "fileName": "new01.mp4",

@@ -475,18 +475,53 @@ app.post('/api/upload-video', upload.single('video'), async (req, res) => {
 
     const videoFilename = req.file.filename;
     const jobId = Date.now().toString();
+    const userEmail = req.body.userEmail || 'anonymous';
+
+    // Upload to Supabase Storage if configured
+    let storageUrl = `/videos/${videoFilename}`;
+    let storagePath = `/videos/${videoFilename}`;
+    
+    if (db.isConfigured()) {
+      try {
+        console.log(`📤 Uploading ${videoFilename} to Supabase Storage...`);
+        const fileBuffer = fs.readFileSync(req.file.path);
+        
+        // Create a file-like object for Supabase
+        const file = {
+          buffer: fileBuffer,
+          mimetype: req.file.mimetype,
+          originalname: videoFilename
+        };
+        
+        const uploadResult = await db.storage.uploadVideo(
+          fileBuffer,
+          userEmail.replace('@', '_').replace('.', '_'),
+          videoFilename
+        );
+        
+        storageUrl = uploadResult.url;
+        storagePath = uploadResult.path;
+        console.log(`✅ Video uploaded to Supabase: ${storagePath}`);
+      } catch (uploadError) {
+        console.error('⚠️  Supabase upload failed, using local storage:', uploadError.message);
+        // Continue with local storage if Supabase upload fails
+      }
+    }
 
     processingJobs.set(jobId, {
       status: 'processing',
       filename: videoFilename,
       progress: 0,
-      message: 'Video uploaded, starting analysis...'
+      message: 'Video uploaded, starting analysis...',
+      storageUrl,
+      storagePath
     });
 
     res.json({
       success: true,
       jobId: jobId,
       filename: videoFilename,
+      storageUrl: storageUrl,
       message: 'Video uploaded successfully. Processing started.'
     });
 
@@ -525,6 +560,23 @@ app.get('/api/results/:filename', (req, res) => {
     res.json(results);
   } catch (error) {
     console.error('Results error:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Get merged analysis (all results)
+app.get('/api/merged-analysis', (req, res) => {
+  try {
+    const mergedPath = path.join(__dirname, 'outputs', 'analysis', 'merged_output_analysis.json');
+    
+    if (!fs.existsSync(mergedPath)) {
+      return res.status(404).json({ error: 'Merged analysis not found' });
+    }
+
+    const data = JSON.parse(fs.readFileSync(mergedPath, 'utf8'));
+    res.json(data);
+  } catch (error) {
+    console.error('Merged analysis error:', error);
     res.status(500).json({ error: error.message });
   }
 });
@@ -573,7 +625,7 @@ function processVideo(jobId, videoFilename) {
     console.error(`Python stderr: ${data}`);
   });
 
-  pythonProcess.on('close', (code) => {
+  pythonProcess.on('close', async (code) => {
     if (code === 0) {
       console.log(`Analysis complete for ${videoFilename}`);
       
@@ -590,6 +642,67 @@ function processVideo(jobId, videoFilename) {
           message: 'Analysis completed successfully!',
           results: results
         });
+
+        // Save analysis to Supabase if configured
+        if (db.isConfigured()) {
+          try {
+            console.log(`💾 Saving analysis to Supabase for ${videoFilename}...`);
+            
+            // Get storage URLs from job metadata
+            const jobData = processingJobs.get(jobId);
+            const storageUrl = jobData?.storageUrl || `/videos/${videoFilename}`;
+            const storagePath = jobData?.storagePath || `/videos/${videoFilename}`;
+            
+            // Find or create video record
+            let video = await db.videos.findByFilename(videoFilename);
+            if (!video) {
+              const videoPath = path.join(__dirname, 'videos', videoFilename);
+              const stats = fs.existsSync(videoPath) ? fs.statSync(videoPath) : null;
+              
+              video = await db.videos.create({
+                userId: null,
+                filename: videoFilename,
+                originalFilename: videoFilename,
+                fileSize: stats ? stats.size : 0,
+                storageUrl: storageUrl,
+                storagePath: storagePath
+              });
+            }
+
+            // Extract analysis data
+            const drivingScores = results.driving_scores || {};
+            const avgSpeed = results.average_speed_kmph || 0;
+            const trafficSummary = results.traffic_signal_summary || {};
+            const closeEncounters = results.close_encounters || {};
+            
+            // Create analysis record
+            await db.analyses.create({
+              videoId: video.id,
+              userId: null,
+              analysisId: `analysis_${Date.now()}`,
+              overallScore: drivingScores.overall_score || 0,
+              speedScore: drivingScores.safety_score || 0,
+              trafficScore: drivingScores.compliance_score || 0,
+              proximityScore: drivingScores.efficiency_score || 0,
+              avgSpeed: avgSpeed,
+              speedLimit: null,
+              speedingDuration: null,
+              speedingPercentage: null,
+              redLightViolations: trafficSummary.violations ? trafficSummary.violations.length : 0,
+              stopSignViolations: 0,
+              totalTrafficViolations: trafficSummary.violations ? trafficSummary.violations.length : 0,
+              closeEncounters: closeEncounters.event_count || 0,
+              dangerousProximities: closeEncounters.event_count || 0,
+              speedData: results,
+              trafficData: trafficSummary,
+              proximityData: closeEncounters,
+              frameByFrameData: {}
+            });
+            console.log(`✅ Analysis saved to Supabase successfully`);
+          } catch (dbError) {
+            console.error('❌ Failed to save to Supabase:', dbError);
+          }
+        }
       } catch (error) {
         console.error('Error reading results:', error);
         processingJobs.set(jobId, {
@@ -639,6 +752,7 @@ app.listen(PORT, () => {
   console.log(`   - GET  /api/user-analyses/:email (get user's analyses)`);
   console.log(`   - GET  /api/status/:jobId (check processing status)`);
   console.log(`   - GET  /api/results/:filename (get analysis results)`);
+  console.log(`   - GET  /api/merged-analysis (get all results)`);
   console.log(`   - GET  /api/health (health check)`);
   console.log('='.repeat(60));
   
